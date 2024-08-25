@@ -15,8 +15,9 @@ public class DriverFactory {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "emulator-5554");
         capabilities.setCapability("automationName", "UiAutomator2");
-        capabilities.setCapability("app", "C:/Users/desak/Downloads/connectbybca1.apk");
+        capabilities.setCapability("app", "C:/Users/desak/Downloads/connectbybca6.apk");
         capabilities.setCapability("appPackage", "com.team6.connectbca");
+        capabilities.setCapability("autoGrantPermissions", true);
 //        capabilities.setCapability("appActivity", "com.team6.connectbca.MainActivity");
 
 //        driver = new AndroidDriver(capabilities);

@@ -18,9 +18,27 @@ public class HomePage extends DriverFactory{
     }
 
     By username = MobileBy.id("com.team6.connectbca:id/salutationText");
+    By mutation = MobileBy.id("com.team6.connectbca:id/homeMutationIcon");
+    By qris = MobileBy.id("com.team6.connectbca:id/homeQrisIcon");
+    By transfer = MobileBy.id("com.team6.connectbca:id/homeTransferIcon");
 
     public void usernameUserDisplayed() {
         MobileElement usernameElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(username));
         usernameElement.isDisplayed();
+    }
+
+    public void clickMutationButton() {
+        MobileElement mutationButtonElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(mutation));
+        mutationButtonElement.click();
+    }
+
+    public void clickQris() {
+        MobileElement qrisButtonElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(qris));
+        qrisButtonElement.click();
+    }
+
+    public void clickTransfer() {
+        MobileElement transferButtonElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(transfer));
+        transferButtonElement.click();
     }
 }

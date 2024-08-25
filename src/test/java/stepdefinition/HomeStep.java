@@ -2,6 +2,7 @@ package stepdefinition;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import page.HomePage;
@@ -20,5 +21,20 @@ public class HomeStep {
     @Then("User is on home page")
     public void user_is_on_home_page() throws InterruptedException {
         homePage.usernameUserDisplayed();
+    }
+
+    @Given("User in on mutation page")
+    public void user_in_on_mutation_page() {
+        homePage.clickMutationButton();
+    }
+
+    @Given("User is on the qris page")
+    public void user_is_on_the_qris_page() {
+        homePage.clickQris();
+    }
+
+    @Given("User is on the transfer page")
+    public void user_is_on_the_transfer_page() {
+        homePage.clickTransfer();
     }
 }

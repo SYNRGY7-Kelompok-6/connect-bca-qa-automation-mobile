@@ -17,13 +17,14 @@ public class LoginPage extends DriverFactory {
         this.wait = new WebDriverWait(driver, 15);
     }
 
-    By loginField = MobileBy.id("com.team6.connectbca:id/etUserId");
+    By userIDField = MobileBy.id("com.team6.connectbca:id/etUserId");
     By passwordField = MobileBy.id("com.team6.connectbca:id/etPassword");
     By masukButton = MobileBy.AccessibilityId("Tekan tombol ini untuk masuk");
     By logoConnectBCA = MobileBy.id("com.team6.connectbca:id/ivLogo");
+    By errorLoginMessage = MobileBy.id("com.team6.connectbca:id/snackbar_text");
 
     public void inputUserID(String userID) {
-        MobileElement userIDElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(loginField));
+        MobileElement userIDElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(userIDField));
         userIDElement.sendKeys(userID);
     }
 
@@ -40,5 +41,10 @@ public class LoginPage extends DriverFactory {
     public void logoConnectBCAisDisplayed() {
         MobileElement logoConnectBCAPath = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(logoConnectBCA));
         logoConnectBCAPath.isDisplayed();
+    }
+
+    public void errorLoginMessageisDisplayed() {
+        MobileElement errorLoginMessageElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(errorLoginMessage));
+        errorLoginMessageElement.isDisplayed();
     }
 }

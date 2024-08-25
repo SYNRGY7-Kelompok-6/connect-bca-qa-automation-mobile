@@ -27,8 +27,8 @@ public class LoginStep extends DriverFactory {
         loginPage.logoConnectBCAisDisplayed();
     }
 
-    @And("User input {string} as username")
-    public void userInputAsUsername(String userID) {
+    @And("User input {string} as userID")
+    public void userInputAsUserID(String userID) {
         loginPage.inputUserID(userID);
     }
 
@@ -40,5 +40,10 @@ public class LoginStep extends DriverFactory {
     @When("User click on login button")
     public void userClickOnLoginButton() {
         loginPage.clickMasukButton();
+    }
+
+    @Then("User get error login message")
+    public void user_get_error_login_message() {
+        loginPage.errorLoginMessageisDisplayed();
     }
 }
