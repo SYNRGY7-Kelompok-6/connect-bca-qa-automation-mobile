@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinition"},
         plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json"},
         monochrome = true,
-        tags = "@Transfer-IncorrectPin-Listed-Account"
+        tags = "@Edit-Name"
 )
 
 public class TestRunner {

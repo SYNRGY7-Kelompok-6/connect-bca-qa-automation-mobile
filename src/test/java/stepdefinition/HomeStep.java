@@ -37,4 +37,29 @@ public class HomeStep {
     public void user_is_on_the_transfer_page() {
         homePage.clickTransfer();
     }
+
+    @Given("User click eye button")
+    public void userClickEyeButton() {
+        homePage.clickEyeIcon();
+    }
+
+    @Then("User should be able see balance amount")
+    public void userShouldBeAbleSeeBalanceAmount() {
+        homePage.balanceAmountIsDisplayed();
+    }
+
+    @Given("User click copy icon")
+    public void userClickCopyIcon() {
+        homePage.clickCopyIcon();
+    }
+
+    @Then("User should be able copied account number")
+    public void userShouldBeAbleCopiedAccountNumber() {
+        homePage.successfulCopyIsDisplayed();
+    }
+
+    @Given("User is on the profile page")
+    public void userIsOnTheProfilePage() {
+        homePage.clickProfilePage();
+    }
 }

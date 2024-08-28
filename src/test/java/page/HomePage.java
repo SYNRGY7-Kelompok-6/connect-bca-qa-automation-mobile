@@ -21,6 +21,11 @@ public class HomePage extends DriverFactory{
     By mutation = MobileBy.id("com.team6.connectbca:id/homeMutationIcon");
     By qris = MobileBy.id("com.team6.connectbca:id/homeQrisIcon");
     By transfer = MobileBy.id("com.team6.connectbca:id/homeTransferIcon");
+    By eyeIcon = MobileBy.id("com.team6.connectbca:id/btnIconVisible");
+    By balanceAmount = MobileBy.id("com.team6.connectbca:id/tvBalance");
+    By copyIcon = MobileBy.id("com.team6.connectbca:id/btnIconCopy");
+    By successfulCopy = MobileBy.id("com.team6.connectbca:id/snackbar_text");
+    By profilePage = MobileBy.id("com.team6.connectbca:id/profile");
 
     public void usernameUserDisplayed() {
         MobileElement usernameElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(username));
@@ -40,5 +45,30 @@ public class HomePage extends DriverFactory{
     public void clickTransfer() {
         MobileElement transferButtonElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(transfer));
         transferButtonElement.click();
+    }
+
+    public void clickEyeIcon() {
+        MobileElement eyeIconElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(eyeIcon));
+        eyeIconElement.click();
+    }
+
+    public void balanceAmountIsDisplayed() {
+        MobileElement balanceAmountElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(balanceAmount));
+        balanceAmountElement.isDisplayed();
+    }
+
+    public void clickCopyIcon() {
+        MobileElement copyIconElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(copyIcon));
+        copyIconElement.click();
+    }
+
+    public void successfulCopyIsDisplayed() {
+        MobileElement successfulCopyElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(successfulCopy));
+        successfulCopyElement.isDisplayed();
+    }
+
+    public void clickProfilePage() {
+        MobileElement profilePageElement = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(profilePage));
+        profilePageElement.click();
     }
 }
